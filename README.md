@@ -9,9 +9,9 @@ This project involves creating an irradiance sensor using Arduino and Python to 
 ## Requirements
 ### Hardware
 - Arduino Uno (or compatible board)
-- ML8511 UV Sensor
-- TSL2561 Luminosity Sensor
-- DHT22 Temperature and Humidity Sensor
+- ML8511 UV Sensor Module
+- TSL2561 Luminosity Sensor Module
+- DHT22 Temperature and Humidity Sensor Module
 - Breadboard and connecting wires
 
 ### Software
@@ -26,3 +26,12 @@ This project involves creating an irradiance sensor using Arduino and Python to 
 #### Libraries for Python
 - pyserial
 - time
+
+## Usage
+- Connect the sensors to the Arduino as per the circuit diagram.
+- Upload the Arduino code (IrradienceMeasurer.ino) to the Arduino.
+- Run the Python script (SensorWriter.py) to start logging data.
+
+## Notes
+According to datasheet of TSL2561 sensor (  ), operating characteristics, are defined as High Gain (16x), VDD = 3V. Because of that reason the sensor connected to 3.3V and the gain is set to 16x to amplify low light signals, making the sensor more sensitive. The the integration time is set to 101 ms, providing a balance between signal accuracy and response time. Given constans used to convert raw output of the module to µW/cm². The sensor have two channel, one is fit to measure VIS (Ch0), and other is fit to IR spectrum (Ch1). The conversion constant defined as 27.5 (in test condition λp = 640 nm) for Ch0, and 6.9 for (in test condition λp = 940 nm) Ch1. (The module 
+
