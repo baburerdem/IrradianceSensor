@@ -1,4 +1,4 @@
-# IrradianceSensor
+# Irradiance Sensor
 This project involves creating an irradiance sensor using Arduino and Python to measure and log irradiance, humidity, and temperature. The sensor readings are saved to a text file for further analysis.
 
 ## Contents
@@ -17,3 +17,12 @@ This project involves creating an irradiance sensor using Arduino and Python to 
 ### Software
 - Arduino IDE
 - Python 3.x
+
+#### Libraries for Arduino Ide
+- Adafruit_Sensor
+- Adafruit_TSL2561_U
+- Adafruit_MLX90614
+- DHT
+#### Libraries for Python
+- pyserial
+- time
